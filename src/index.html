@@ -18,9 +18,38 @@
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
-      /* html {
-        height: 10000px;
-      } */
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: fit-content;
+        position: relative;
+        margin: auto;
+      }
+
+      /* Hide the images by default */
+      .mySlides {
+        display: none;
+      }
+
+      .active
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 2s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
     </style>
   </head>
   <body class="bg-white dark:bg-slate-50">
@@ -33,10 +62,10 @@
         </a>
         <div class="flex md:order-2">
           <button
-            data-collapse-toggle="navbar-sticky"
+            data-collapse-toggle="navbar"
             type="button"
             class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-sticky"
+            aria-controls="navbar"
             aria-expanded="false"
           >
             <span class="sr-only">Open main menu</span>
@@ -55,7 +84,7 @@
             </svg>
           </button>
         </div>
-        <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="navbar">
           <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
               <a href="../src/index.html" class="block py-2 pr-4 pl-3 font-medium text-gray-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
@@ -108,8 +137,29 @@
     <!-- Akhir navbar -->
     <br />
     <!-- Image -->
-    <img class="max-w-0 shadow-xl inset-x-96 h-16 top-0 dark:shadow-gray-800" src="../img/1261323.png" alt="image description" />
-    <!-- Akhir img -->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <img src="../img/studio333.jpg" style="width: max-content; height: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="../img/studioset1.jpg" style="width: max-content; height: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="../img/videography.jpg" style="width: max-content; height: 100%" />
+      </div>
+    </div>
+
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!-- Akhir slideshow -->
 
     <!-- About -->
     <div class="mb-4 border-b border-gray-200 dark:border-gray-900 dark:bg-gray-900">
@@ -160,10 +210,10 @@
         <section class="bg-white dark:bg-gray-900">
           <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
             <div class="mt-4 md:mt-0">
-              <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">APA ITU MULTIMEDIA?</h2>
+              <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">APA ITU JURUSAN MULTIMEDIA?</h2>
               <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi illum eius aliquid magnam, ad aspernatur! Voluptatibus corporis alias qui tenetur at, harum corrupti quas reprehenderit debitis expedita quo ducimus est
-                blanditiis optio dolore illo! Repellat ea laudantium quis architecto magni sed nobis alias expedita, dolorum vel, aperiam distinctio earum consequuntur.
+                Multimedia merupakan jurusan yang mempelajari teknik komunikasi menggunakan teknologi komputer dengan melalui beragam media, seperti media suara, gambar, animasi, teks, maupun video. Multimedia menawarkan pengembangan
+                kreativitas dan konsep komunikasi melalui bermacam-macam media atau gabungan dari dua atau lebih media.
               </p>
             </div>
             <img class="w-1/4 dark:hidden object-right mr-24" src="../img/aditya-wardhana-S6OSYUlvJxo-unsplash 1.png" alt="aboutimg" />
@@ -177,8 +227,8 @@
             <div class="mt-4 md:mt-0">
               <h2 class="mb-4 text-4xl tracking-tight font-extrabold mx-2 text-gray-900 dark:text-white"></h2>
               <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam natus earum pariatur nulla eveniet ipsa ad saepe sint ratione aut ex perferendis omnis eius obcaecati, quis veritatis non eaque delectus repellendus at.
-                Adipisci eos maiores tempora aliquid animi pariatur enim velit blanditiis consequuntur maxime ducimus laborum sed, porro voluptate nulla!
+                Menurut Iwan Binanto(2010:2) di dalam multimedia terdapat tiga jenis: Multimedia Interaktif, Hiperaktif, dan Linear. Di SMK LETRIS INDONESIA 2 siswa dan siswi yang memilih jurusan ini akan dituntun untuk mengembangkan minat
+                dan keterampilannya dalam berbagai bidang multimedia hingga menguasai dan dapat menyalurkan kreativitas mereka melalui media teknologi.
               </p>
             </div>
           </div>
@@ -198,7 +248,9 @@
                   <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">Design Grafis</h3>
                   <span class="text-gray-500 dark:text-gray-400">Web Developer</span>
                   <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et molestias hic doloribus dolorem numquam recusandae dolores, culpa rerum totam quis vel, odio aspernatur neque accusamus nulla ipsa facere! Maiores, placeat.
+                    Dalam pengembangan sebuah website, tampilan perlu diperhatikan agar website tersebut terlihat menarik sehingga pengunjung website merasa nyaman saat membuka halaman website tersebut. Jurusan multimedia juga mengajarkan
+                    aspek desain grafis yang diperlukan dalam pembangunan website. Mulai dari pembuatan rancangan desain menggunakan software pengolah desain grafis hingga proses pembangunan website menggunakan HTML dan bahasa sejenis
+                    lainnya.
                   </p>
                   <ul class="flex space-x-4 sm:mt-0"></ul>
                 </div>
@@ -210,8 +262,10 @@
                   <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">Animasi 2D/3D</h3>
                   <span class="text-gray-500 dark:text-gray-400">Animation</span>
                   <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sequi nostrum, voluptatem quidem cumque magnam obcaecati nisi fugiat, temporibus excepturi ullam dolorem rerum ipsum. Officiis in voluptatum sunt minima
-                    atque.
+                    Animasi merupakan gambar bergerak berbentuk dari sekumpulan objek yang disusun secara beraturan mengikuti pergerakan yang telah ditentukan pada setiap pertambahan hitungan waktu yang terjadi. Gambar atau objek yang
+                    dimaksud dalam definisi diatas bisa berupa gambar manusia, hewan, maupun tulisan. Pada proses pembuatannya sang pembuat animasi atau yang lebih dikenal dengan animator harus menggunakan logika berfikir untuk menentukan
+                    alur gerak suatu objek dari keadaan awal hingga keadaan akhir objek tersebut. Animasi juga memkiliki daya tarik sehingga tampilan dapat terlihat lebih menarik. Animasi tidak hanya ada satu jenis. Terdapat juga animasi 3
+                    Dimensi yang cenderung memerlukan teknologi komputer dalam pembuatannya.
                   </p>
                   <ul class="flex space-x-4 sm:mt-0"></ul>
                 </div>
@@ -223,7 +277,9 @@
                   <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">Photography</h3>
                   <span class="text-gray-500 dark:text-gray-400">Photography</span>
                   <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore beatae nisi dolore officia perferendis itaque aliquam porro, soluta voluptatibus neque quidem aut, molestiae odit minima inventore ad quasi non atque.
+                    Pada dasarnya tujuan dan hakekat fotografi adalah komunikasi. Suatu karya fotografi dapat disebut memiliki nilai komunikasi ketika dalam penampilan subjeknya digunakan sebagai medium penyampaian pesan atau merupakan ide
+                    yang terekspresikan kepada pemirsanya sehingga terjalin suatu kontak pemahaman makna. Dalam hal ini karya foto tersebut juga dapat dikatakan sebagai medium yang memiliki nilai guna fungsional dan sekaligus sebagai
+                    instrumen karena dijadikan alat dalam proses komunikasi penyampaian pesan/ide si pencipta karya foto.
                   </p>
                   <ul class="flex space-x-4 sm:mt-0"></ul>
                 </div>
@@ -232,11 +288,12 @@
                 <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png" alt="film img" />
 
                 <div class="p-5">
-                  <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">Film</h3>
+                  <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">Cinematography</h3>
                   <span class="text-gray-500 dark:text-gray-400">Film</span>
                   <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quidem corrupti doloribus ipsum modi. Perspiciatis dicta incidunt nulla alias unde eligendi! Mollitia iusto fugiat necessitatibus quis id repudiandae
-                    cupiditate odio.
+                    Sinematografi (dari bahasa Yunani: kinema - κίνημα "gerakan" dan graphein - γράφειν "merekam") adalah ilmu terapan yang membahas tentang teknik menangkap gambar dan sekaligus menggabung-gabungkan gambar tersebut sehingga
+                    menjadi rangkaian gambar yang memililki kemampuan menyampaikan ide dan cerita. Pada industri perfilman, seorang Sinematografer atau DoP akan dibantu oleh sebuah tim yang dibentuknya Karena film adalah sebuah kerja tim
+                    (Team Work) maka sangatlah penting untuk seorang sinematografer atau DoP untuk mempunyai tim yang bisa bekerja sama secara tim dengannya. Artinya tidak bekerja secara individu.
                   </p>
                   <ul class="flex space-x-4 sm:mt-0"></ul>
                 </div>
@@ -251,7 +308,7 @@
             <div class="max-w-screen-md mb-8 lg:mb-16">
               <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">PELUANG PROSPEK KERJA</h2>
               <p class="text-gray-500 sm:text-xl dark:text-white">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente ea animi nihil eum harum sed sit esse! Amet distinctio pariatur rem enim, sunt quo fugiat voluptates nesciunt repellat doloribus tempora?
+                Dunia multimedia menawarkan banyak peluang kerja, bisnis dan berbagai bidang pekerjaan yang dapat diambil. Berikut adalah berbagai peluang prospek kerja yang dapat diraih melalui jurusan multimedia.
               </p>
             </div>
             <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
@@ -266,7 +323,10 @@
                   </svg>
                 </div>
                 <h3 class="mb-2 text-xl font-bold dark:text-white">Marketing</h3>
-                <p class="text-gray-500 dark:text-gray-400">Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.</p>
+                <p class="text-gray-500 dark:text-gray-400">
+                  Dalam dunia marketing diperlukan keterampilan dalam penguasaan multimedia. Pekerjaan yang dapat mencukupi kebutuhan skill multimedia dalam marketing diantaranya adalah Graphic Designer, Media Planner, dan Social Media
+                  Specialist.
+                </p>
               </div>
               <div>
                 <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
@@ -276,8 +336,11 @@
                     ></path>
                   </svg>
                 </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">Legal</h3>
-                <p class="text-gray-500 dark:text-gray-400">Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.</p>
+                <h3 class="mb-2 text-xl font-bold dark:text-white">Web Designer</h3>
+                <p class="text-gray-500 dark:text-gray-400">
+                  Peluang kerja pertama yang siap menunggu lamaran alumni jurusan multimedia adalah web designer. Tanggung jawab utama seorang web designer adalah mendesain halaman-halaman yang ada di dalam website. Web designer juga
+                  bertanggung jawab untuk memperbarui konten dan desain website apabila dibutuhkan.
+                </p>
               </div>
               <div>
                 <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
@@ -290,8 +353,11 @@
                     <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
                   </svg>
                 </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">Business Automation</h3>
-                <p class="text-gray-500 dark:text-gray-400">Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of new templates to help you get started.</p>
+                <h3 class="mb-2 text-xl font-bold dark:text-white">Animator/Ilustrator</h3>
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  Illustrator menggabungkan seni, desain, dan kreativitas untuk menghasilkan gambar visual orisinil untuk berbagai produk dan media. Sedangkan, animator melibatkan seni membuat gambar bergerak atau animasi dalam bentuk 2
+                  dimensi (2D) ataupun 3 dimensi (3D). Karya para animator bisa digunakan untuk film, iklan, video, website, games, dan banyak media lainnya.
+                </p>
               </div>
               <div>
                 <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
@@ -302,10 +368,11 @@
                     />
                   </svg>
                 </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">Photography & Video</h3>
+                <h3 class="mb-2 text-xl font-bold dark:text-white">Photographer & Videographer</h3>
                 <p class="text-gray-500 dark:text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dolorem repudiandae explicabo, beatae quaerat sequi aliquid quod dolore excepturi cupiditate dolorum harum enim voluptas. Voluptatibus, illo recusandae. Nam,
-                  mollitia possimus.
+                  Videografer adalah seseorang yang bertanggung jawab untuk merekam atau membuat produksi video. Berdasarkan jenisnya, mereka dibagi menjadi, yakni videografer in-house, atau yang membuat video untuk perusahaannya sendiri.
+                  Fotografer adalah seseorang yang merekam peristiwa dalam bentuk gambar untuk berbagai objek seperti orang, tempat dan peristiwa menggunakan kamera. Ada yang menawarkan jasa foto komersial secara langsung, yakni fotografer
+                  memotret lalu dibayar. Misalnya memotret perorangan, keluarga, acara pernikahan, ataupun produk.
                 </p>
               </div>
               <div>
@@ -319,7 +386,8 @@
                 </div>
                 <h3 class="mb-2 text-xl font-bold dark:text-white">Film</h3>
                 <p class="text-gray-500 dark:text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aut sint sunt reiciendis ullam, deserunt aliquid aspernatur, nisi id qui consectetur quam sequi nesciunt libero itaque. Quas quidem dignissimos explicabo!
+                  Dunia perfilman dan pertelevisian dapat menempuh karir berpenghasilan tinggi dalam industri film dan TV. Beberapa prospek kerja berpenghasilan tinggi tersebut di antaranya editor film atau acara TV, sutradara, penulis
+                  skenario, serta produser.
                 </p>
               </div>
               <div>
@@ -331,10 +399,11 @@
                     />
                   </svg>
                 </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white">Design</h3>
+                <h3 class="mb-2 text-xl font-bold dark:text-white">Graphic Designer</h3>
                 <p class="text-gray-500 dark:text-gray-400">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus corrupti ut dolor hic. Consectetur voluptates numquam optio, temporibus explicabo possimus enim excepturi quisquam consequuntur harum est tempora
-                  perferendis quas dolore.
+                  Graphic designer bertanggung jawab membuat desain untuk keperluan publikasi di media cetak, website, poster, hingga kemasan produk. Seorang graphic designer juga memiliki tanggung jawab membuat identitas visual untuk
+                  keperluan branding perusahaan. Hampir setiap perusahaan membutuhkan desainer grafis, karena itu peluang kerjanya terbuka lebar bagi lulusan studi multimedia. Kamu yang berminat menjadi desainer grafis bisa bekerja di
+                  agensi untuk menangani klien, ataupun bekerja di perusahaan sebagai in-house graphic designer.
                 </p>
               </div>
             </div>
@@ -413,6 +482,43 @@
           }
         }
       });
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+
+        showSlides();
+
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {
+            slideIndex = 1;
+          }
+          slides[slideIndex - 1].style.display = "block";
+          setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+      }
     </script>
   </body>
 </html>
